@@ -3,8 +3,25 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class CaveExplorer {
+	private char[][] cave;
+    private String path;
+    private boolean explored;
+    private boolean found;
+
 	// Step 1: Zero parameter constructor to create the specified cave
-	
+	public CaveExplorer() {
+        cave = new char[][] {
+            {'R', 'R', 'R', 'R', 'R', 'R'},
+            {'R', '.', '.', 'S', 'R', 'R'},
+            {'R', '.', 'R', 'R', 'R', 'R'},
+            {'R', '.', 'M', 'R', 'R', 'R'},
+            {'R', 'R', 'R', 'R', 'R', 'R'}
+        };
+
+        path = "";
+        explored = false;
+        found = false;
+    }
 	// Step 2: toString method
 	
 	// Step 3: solve method
