@@ -1,4 +1,7 @@
-	
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 public class CaveExplorer {
 	// Step 1: Zero parameter constructor to create the specified cave
 	
