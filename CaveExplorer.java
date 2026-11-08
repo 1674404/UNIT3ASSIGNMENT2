@@ -131,6 +131,23 @@ public class CaveExplorer {
     	  // Construct cave and populate with rest of data in the file
     	  
 	}
+		  cave = new char[rows][cols];
+
+        for (int row = 0; row < rows; row++) {
+            s = in.nextLine();
+
+            for (int col = 0; col < cols; col++) {
+                cave[row][col] = s.charAt(col);
+            }
+        }
+
+        in.close();
+
+        path = "";
+        explored = false;
+        found = false;
+    }
+
 	*/
 
 	
@@ -138,11 +155,23 @@ public class CaveExplorer {
 		System.out.println("Starting CaveExplorer");
 		
 		// Create a CaveExplorer object and print the starting layout
-		
+		CaveExplorer cE1 = new CaveExplorer();
+
+        System.out.println("\nCave 1 starting layout:");
+        System.out.print(cE1);
 		// Call solve
-		
+		boolean solved1 = cE1.solve();
+
 		// Print the final layout, whether there is a path, and if so, what it is.
-		
+		System.out.println("Cave 1 final layout:");
+        System.out.print(cE1);
+        System.out.println("Path exists: " + solved1);
+		if (solved1) {
+            System.out.println("Path: " + cE1.getPath());
+        }
+        else {
+            System.out.println("No path to the mirror pool.");
+        }
 		// Step 5/6: Repeat for a different CaveExplorer object read from a file
 		// Uncomment code below to start testing your 1-parameter constructor
 
