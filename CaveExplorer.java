@@ -116,7 +116,9 @@ public class CaveExplorer {
         return true;
     }
 	// Step 4: getPath method
-	
+	public String getPath() {
+        return path;
+    }
 	// Step 5: One parameter constructor to read from a file
 	/*
 	public CaveExplorer (String fname) throws Exception {
