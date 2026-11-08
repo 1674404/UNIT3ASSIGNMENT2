@@ -23,6 +23,18 @@ public class CaveExplorer {
         found = false;
     }
 	// Step 2: toString method
+	    public String toString() {
+        String result = "";
+
+        for (int row = 0; row < cave.length; row++) {
+            for (int col = 0; col < cave[row].length; col++) {
+                result += cave[row][col];
+            }
+            result += "\n";
+        }
+
+        return result;
+    }
 	
 	// Step 3: solve method
 	
